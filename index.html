@@ -1,0 +1,213 @@
+<!DOCTYPE html>  
+<html lang="en"><head>  
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<title>Coffee Mug Script</title>  
+<link rel='stylesheet' href='styles.css' type='text/css' />  
+<script src="suv/JQuery_install/jquery-2.1.1.min.js"></script>
+<script src="changes.js"></script>  
+<script src="suv/jquery-ui-1.10.4.custom.js"></script>
+<script src="suv/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="suv/html2canvas.js"></script>
+<script type="text/javascript">
+			function photo(){
+				$('#draggable').css({"padding":"15px 0px 0px 15px"});
+				$('#draggable1').css({"padding":"0px 0px 0px 15px"});
+				html2canvas(document.getElementById("pic"), {
+            onrendered: function(canvas) {
+            $("canvas").remove();
+            	document.getElementById("imgs1").appendChild(canvas);
+            	$('canvas').attr("id","canvas1");
+            	var can = document.getElementById('canvas1');
+            	$('#download').attr("download",can.toDataURL());
+					$('#download').attr("href",can.toDataURL());
+            }
+            });
+			}
+    </script>
+</head>  
+<body > 
+<div id="middle_cont">
+<div id="side_bar">
+<div id="icon0" class="icon">
+<img src="img/mug.jpg" alt="" />
+</div>
+<div id="icon1" class="icon">
+<img src="img/pic1.jpg" alt="" />
+</div>
+<div id="icon2" class="icon">
+<img src="img/pic7.jpg" alt="" />
+</div>
+<div id="icon3" class="icon">
+<img src="img/pic8.jpg" alt="" />
+</div>
+</div>
+<div id="main">
+<div id="left_color"></div>
+<div id="imgs">
+<a id="max_min" onclick="photo()"><img src="img/maxi.png" alt="" /></a>
+<div id="pic">
+<img id="bk"><img id="inr" src="img/mug2.png" alt="cup_inner" /><img id="bdr" src="img/mug1.png" alt="cup_border" /><div id="nam" >
+ <div id="draggable"><p></p></div><div id="draggable1"><img width="200px" height="200px" src=""></div>
+ </div>
+</div>
+</div>
+<div id="changes">
+	<label>Cup Color : &nbsp;</label>
+	<input type="color"><br /><br />
+	<label>Text : &nbsp;</label>
+	<textarea>Suvarna</textarea><br /><br />
+	<label>Text-Font : &nbsp;</label>
+	<select id="fonts">
+	<option disabled selected>None</option>
+	<option >droid_sansbold</option>
+	<option >League Gothic</option>
+	<option >marketing_scriptregular</option>
+	<option >droid_sansregular</option>
+	<option>austie_bost_chunky_descriptRg</option>
+	<option>djah_beatregular</option>
+	<option>shining_pearlregular</option>
+	</select><br /><br />
+	<label>Text-Font-Size : &nbsp;</label>
+	<select id="sizes">
+	<option disabled selected>None</option>
+	<option>21</option>	
+	<option >22</option>
+	<option >23</option>
+	<option >24</option>
+	<option >25</option>
+	<option>26</option>
+	<option>27</option>
+	<option>28</option>
+	<option>29</option>
+	<option>30</option>
+	<option>31</option>
+	<option>32</option>
+	<option>33</option>
+	<option>34</option>
+	<option>35</option>
+	<option>36</option>
+	<option>37</option>
+	<option>38</option>
+	<option>39</option>
+	<option>40</option>	
+	<option>41</option>	
+	<option >42</option>
+	<option >43</option>
+	<option >44</option>
+	<option >45</option>
+	<option>46</option>
+	<option>47</option>
+	<option>48</option>
+	<option>49</option>
+	<option>50</option>
+	<option>51</option>
+	<option>52</option>
+	<option>53</option>
+	<option>54</option>
+	<option>55</option>
+	<option>56</option>
+	<option>57</option>
+	<option>58</option>
+	<option>59</option>
+	<option>60</option>
+	<option>61</option>
+	<option>62</option>
+	<option>63</option>
+	<option>64</option>
+	<option>65</option>
+	<option>66</option>
+	<option>67</option>
+	<option>68</option>
+	<option>69</option>
+	<option>70</option>
+	<option>71</option>
+	<option>72</option>
+	<option>73</option>
+	<option>74</option>
+	<option>75</option>
+	<option>76</option>
+	<option>77</option>
+	<option>78</option>
+	<option>79</option>
+	<option>80</option>
+	</select><br /><br />
+	<label>Text-Rotate : &nbsp;</label>
+	<select id="rot">
+	<option disabled selected>None</option>
+	<option>-10</option>
+	<option>-9</option>	
+	<option>-8</option>
+	<option>-7</option>
+	<option>-6</option>
+	<option>-5</option>
+	<option>-4</option>
+	<option>-3</option>
+	<option>-2</option>
+	<option>-1</option>
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	</select><br /><br />
+	<label>Text Color : &nbsp;</label>
+	<input type="color"><br /><br />
+	<label>To Drag Text/Image:</label>
+	<input type="button" value="Click Here"><br /><br />
+	<label>Image-Rotate : &nbsp;</label>
+	<select id="rot1">
+	<option disabled selected>None</option>
+	<option>-10</option>
+	<option>-9</option>	
+	<option>-8</option>
+	<option>-7</option>
+	<option>-6</option>
+	<option>-5</option>
+	<option>-4</option>
+	<option>-3</option>
+	<option>-2</option>
+	<option>-1</option>
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	</select><br /><br />
+	<label>Select Image : &nbsp;</label>
+	<div id="rad"><input type="radio" name="pic"><img width="20px" height="20px" src="img/suv.jpg" alt="" /><br/>
+	<input type="radio" name="pic"><img width="20px" height="20px" src="img/mug2.png" alt="" /><br/>
+	<input type="radio" name="pic"><img width="20px" height="20px" src="img/pics1.jpg" alt="" /><br/>
+	<input type="radio" name="pic"><img width="20px" height="20px" src="img/pics3.jpg" alt="" /><br/>
+	<input type="radio" name="pic"><img width="20px" height="20px" src="img/pics4.jpg" alt="" /><br/>
+	<input type="radio" name="pic"><img width="20px" height="20px" src="img/pics5.jpg" alt="" /><br/>
+	<b>None</b><input type="radio" name="pic"><br />
+	</div><br/>
+</div>
+</div>
+</div>
+<div id="middle_cont1">
+<div id="previews">
+</div>
+<div id="previews1">
+<a id="max_min"><img src="img/cross.png" alt="" /></a>
+<div id="imgs1">
+<a id="download" href="" download=""><img src="img/download.png" alt="" /></a>
+ </div>
+</div>
+</div>
+</div>
+</body>  
+</html> 
